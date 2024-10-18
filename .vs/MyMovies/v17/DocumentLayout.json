@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\WebApi\\MyMovies\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Program.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Program.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Program.cs*",
+              "RelativeToolTip": "MyMovies\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T12:27:19.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\appsettings.json",
+              "RelativeDocumentMoniker": "MyMovies\\appsettings.json",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\appsettings.json*",
+              "RelativeToolTip": "MyMovies\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-17T12:25:49.605Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
