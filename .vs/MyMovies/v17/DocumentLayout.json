@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\Projects\\WebApi\\MyMovies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\glopalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\glopalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,40 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20241018211022_AddGenreEntity.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs",
-              "RelativeToolTip": "MyMovies\\Migrations\\20241018211022_AddGenreEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Repository\\Repository.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\Repository.cs",
+              "RelativeToolTip": "MyMovies\\Repository\\Repository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:10:22.89Z",
+              "WhenOpened": "2024-10-19T19:26:18.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20241018210703_AddGenreEntity.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs",
-              "RelativeToolTip": "MyMovies\\Migrations\\20241018210703_AddGenreEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "RelativeToolTip": "MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:07:04.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "MyMovies\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:05:40.592Z",
+              "WhenOpened": "2024-10-19T19:26:05.838Z",
               "EditorCaption": ""
             },
             {
@@ -93,29 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GlopalUsings.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\GlopalUsings.cs",
-              "RelativeDocumentMoniker": "MyMovies\\GlopalUsings.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\GlopalUsings.cs",
-              "RelativeToolTip": "MyMovies\\GlopalUsings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAzAAAA",
+              "DocumentIndex": 2,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Controllers\\GenresController.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "MyMovies\\Controllers\\GenresController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T20:32:28.372Z",
+              "WhenOpened": "2024-10-18T21:42:43.887Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Models\\Genre.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Models\\Genre.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Models\\Genre.cs",
-              "RelativeToolTip": "MyMovies\\Models\\Genre.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T20:29:17.631Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
