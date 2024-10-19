@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\WebApi\\MyMovies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Repository\\Repository.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\Repository.cs",
-              "RelativeToolTip": "MyMovies\\Repository\\Repository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T19:26:18.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Repository\\IRepository\\IRepository.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
-              "RelativeToolTip": "MyMovies\\Repository\\IRepository\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T19:26:05.838Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -71,21 +41,34 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GenresController.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Controllers\\GenresController.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
-              "RelativeToolTip": "MyMovies\\Controllers\\GenresController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "DocumentIndex": 1,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "RelativeToolTip": "MyMovies\\Repository\\IRepository\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:42:43.887Z",
+              "WhenOpened": "2024-10-19T19:26:05.838Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Controllers\\GenresController.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs*",
+              "RelativeToolTip": "MyMovies\\Controllers\\GenresController.cs*",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBMAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T21:42:43.887Z",
+              "EditorCaption": ""
             }
           ]
         }
