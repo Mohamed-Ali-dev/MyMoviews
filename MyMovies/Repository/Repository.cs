@@ -36,10 +36,14 @@ namespace MyMovies.Repository
         {
            dbset.Add(item);
         }
+     
         public bool ObjectExist(Expression<Func<T, bool>> filter)
         {
             return dbset.Any(filter);
         }
-
+        public void Remove(T item)
+        {
+            dbset.Remove(item);
+        }
     }
 }

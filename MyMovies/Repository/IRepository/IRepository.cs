@@ -8,6 +8,7 @@ namespace MyMovies.Repository.IRepository
         T Get(Expression<Func<T, bool>> filter);
         void Add(T item);
          bool ObjectExist(Expression<Func<T, bool>> filter);
+        void Remove(T entity);
 
     }
 }

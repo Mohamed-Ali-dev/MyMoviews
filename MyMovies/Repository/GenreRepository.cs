@@ -11,5 +11,11 @@ namespace MyMovies.Repository
         {
             _db = db;
         }
+        public void Update(int id ,GenreDto genreDto)
+        {
+            var genreFromDb = _db.Genres.Where(g => g.Id == id)
+                .FirstOrDefault(); 
+            genreFromDb.Name = genreDto.Name;
+        }
     }
 }

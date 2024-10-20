@@ -34,7 +34,36 @@ namespace MyMovies.Controllers
             _unitOfWork.Genre.Add(genre);
             _unitOfWork.Save();
             return Ok(genre);
+        }
+        [HttpPut("{id}")]
+        public IActionResult UpdateGenre(int id, [FromBody] GenreDto dto )
+        {
+            if (!_unitOfWork.Genre.ObjectExist(u => u.Id == id))
+            {
+                return NotFound($"No Genre with found with Id : {id}");
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
+            _unitOfWork.Genre.Update(id, dto);
+            _unitOfWork.Save();
+            return Ok(dto);
+        }
+        [HttpDelete]
+        public IActionResult DeleteGenre(int id)
+        {
+            if(id == 0)
+            {
+                return BadRequest("Id cannot be zero");
+            }
+            if (!_unitOfWork.Genre.ObjectExist(u => u.Id == id))
+            {
+                return NotFound();
+            }
+            var genreToDelete = _unitOfWork.Genre.Get(u => u.Id == id);
+           _unitOfWork.Genre.
         }
     }
 }
