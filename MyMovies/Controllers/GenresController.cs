@@ -51,7 +51,7 @@ namespace MyMovies.Controllers
             _unitOfWork.Save();
             return Ok(dto);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteGenre(int id)
         {
             if(id == 0)
@@ -60,10 +60,11 @@ namespace MyMovies.Controllers
             }
             if (!_unitOfWork.Genre.ObjectExist(u => u.Id == id))
             {
-                return NotFound();
+                return NotFound("Genre Not Found");
             }
             var genreToDelete = _unitOfWork.Genre.Get(u => u.Id == id);
-           _unitOfWork.Genre.
+           _unitOfWork.Genre.Remove(genreToDelete);
+            return Ok(genreToDelete);
         }
     }
 }
