@@ -15,19 +15,35 @@ namespace MyMovies.Repository
             _db = db;
             this.dbset = _db.Set<T>();
         }
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null)
+        public  IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = dbset;
             if (filter != null)
             {
                 query = query.Where(filter);
             }
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var invludeprop in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries ))
+                {
+                    query = query.Include(invludeprop);
+                }
+            }
             return query.ToList();
         }
-        public T Get(Expression<Func<T, bool>> filter)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbset;
+
             query = query.Where(filter);
+
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeprop in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeprop);
+                }
+            }
             return query.FirstOrDefault();
 
         }
