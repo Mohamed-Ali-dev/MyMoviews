@@ -10,5 +10,12 @@ namespace MyMovies.Data
         }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<UserPermission>().ToTable("UserPermissions")
+                .HasKey(x => new {x.UserId, x.PermissionId});
+        }
     }
 }

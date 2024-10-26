@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyMovies.Authorization;
 using MyMovies.Models;
 using MyMovies.Repository.IRepository;
+using System.Security.Claims;
 
 namespace MyMovies.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class GenresController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -15,8 +20,12 @@ namespace MyMovies.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpGet]
+        [Route("")]
+        [CheckPermission(Permission.Read)]
         public IActionResult GetGenres()
         {
+            var userName = User.Identity.Name;
+            var userId = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var genres = _unitOfWork.Genre.GetAll().OrderBy(g =>g.Name);
             return Ok(genres);
         }
