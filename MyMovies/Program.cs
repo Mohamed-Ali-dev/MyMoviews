@@ -8,18 +8,19 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MyMovies;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using MyMovies.Authorization;
+using MyMovies.Models;
+using Microsoft.AspNetCore.Identity;
+using MyMovies.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
     throw new InvalidOperationException("No Connection string was found");
 // Add services to the container.
 
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add<PermissionBasedAuthorizationFilter>();
-});
+builder.Services.AddControllers();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,8 +28,21 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddCors();
+
 var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
-builder.Services.AddSingleton(jwtOptions); 
+builder.Services.AddSingleton(jwtOptions);
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("SuperUsersOnly", builder =>
+    {
+        builder.RequireRole("Admin", "SuperUser");
+    });
+    options.AddPolicy("EmployeesOnly", builder =>
+    {
+        builder.RequireClaim("UserType", "Employee","User");
+    });
+});
 builder.Services.AddAuthentication()
     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
     {
@@ -86,6 +100,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 //specify
 app.UseCors(c =>c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

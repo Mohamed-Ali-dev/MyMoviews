@@ -17,27 +17,8 @@ namespace MyMovies.Controllers
         [Route("auth")]
         public IActionResult AuthenticateUser(AuthenticationRequestDto request)
         {
-            var user = dbContext.Set<User>().FirstOrDefault(x => x.Name == request.Username &&
-            x.Password == request.Password);
-            if (user == null) 
-                return Unauthorized();
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var tokenDiscriptor = new SecurityTokenDescriptor
-            {
-                Issuer = jwtOptions.Issuer,
-                Audience = jwtOptions.Audience,
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SigningKey)),
-                SecurityAlgorithms.HmacSha256),
-                Subject = new ClaimsIdentity(new Claim[]
-                {
-                    new (ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new (ClaimTypes.Name, user.Name),
-                    new(ClaimTypes.Email, "1@b.com")
-                })
-            };
-            var securiryToken = tokenHandler.CreateToken(tokenDiscriptor);
-           var accessToken =  tokenHandler.WriteToken(securiryToken);
-            return Ok(accessToken);
+         
+            return Ok();
         }
     }
 }

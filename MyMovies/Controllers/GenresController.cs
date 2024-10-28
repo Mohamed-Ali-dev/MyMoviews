@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MyMovies.Authorization;
 using MyMovies.Models;
 using MyMovies.Repository.IRepository;
 using System.Security.Claims;
@@ -21,7 +20,6 @@ namespace MyMovies.Controllers
         }
         [HttpGet]
         [Route("")]
-        [CheckPermission(Permission.Read)]
         public IActionResult GetGenres()
         {
             var userName = User.Identity.Name;
