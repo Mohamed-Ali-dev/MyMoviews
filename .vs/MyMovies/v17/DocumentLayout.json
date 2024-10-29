@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Projects\\WebApi\\MyMovies\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241029120940_SeadRoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyMovies\\Migrations\\20241029120940_SeadRoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\migrations\\20241028193746_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\migrations\\20241028193746_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|d:\\projects\\webapi\\mymovies\\mymovies\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBC241AF-20F1-4205-A56E-22DE1B0A7B6D}|MyMovies\\MyMovies.csproj|solutionrelative:mymovies\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "MyMovies\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs*",
-              "RelativeToolTip": "MyMovies\\Data\\ApplicationDbContext.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T19:37:04.892Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -63,7 +58,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241029120940_SeadRoles.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241029120940_SeadRoles.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Migrations\\20241029120940_SeadRoles.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241029120940_SeadRoles.cs*",
+              "RelativeToolTip": "MyMovies\\Migrations\\20241029120940_SeadRoles.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T12:09:40.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20241028193746_AddIdentity.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241028193746_AddIdentity.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Migrations\\20241028193746_AddIdentity.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Migrations\\20241028193746_AddIdentity.cs",
+              "RelativeToolTip": "MyMovies\\Migrations\\20241028193746_AddIdentity.cs",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAQwLQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:37:47.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "MyMovies\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "MyMovies\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:37:04.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "MyMovies\\Controllers\\UsersController.cs",
@@ -71,12 +104,11 @@
               "RelativeToolTip": "MyMovies\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T19:30:48.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T19:30:48.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Program.cs",
               "RelativeDocumentMoniker": "MyMovies\\Program.cs",
@@ -84,12 +116,11 @@
               "RelativeToolTip": "MyMovies\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T19:28:57.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T19:28:57.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GenresController.cs",
               "DocumentMoniker": "D:\\Projects\\WebApi\\MyMovies\\MyMovies\\Controllers\\GenresController.cs",
               "RelativeDocumentMoniker": "MyMovies\\Controllers\\GenresController.cs",
@@ -97,12 +128,7 @@
               "RelativeToolTip": "MyMovies\\Controllers\\GenresController.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAkwE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T19:28:38.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-10-28T19:28:38.033Z"
             }
           ]
         }
