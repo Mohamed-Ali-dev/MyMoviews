@@ -17,35 +17,21 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     throw new InvalidOperationException("No Connection string was found");
 // Add services to the container.
 
-builder.Services.AddControllers();
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddAutoMapper(typeof(Program));
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer(connectionString));
-builder.Services.AddCors();
-
 var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
 builder.Services.AddSingleton(jwtOptions);
 
-builder.Services.AddAuthorization(options =>
+builder.Services.AddControllers();
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddAuthentication(options =>
 {
-    options.AddPolicy("SuperUsersOnly", builder =>
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer( options =>
     {
-        builder.RequireRole("Admin", "SuperUser");
-    });
-    options.AddPolicy("EmployeesOnly", builder =>
-    {
-        builder.RequireClaim("UserType", "Employee","User");
-    });
-});
-builder.Services.AddAuthentication()
-    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
-    {
+        options.RequireHttpsMetadata = false;
         options.SaveToken = true; //save token in httpcontext
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -58,30 +44,41 @@ builder.Services.AddAuthentication()
         };
 
     });
-    //.AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);
-builder.Services.AddSwaggerGen(options =>
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddAutoMapper(typeof(Program));
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(connectionString));
+builder.Services.AddCors();
+
+
+builder.Services.AddSwaggerGen(o =>
 {
-    options.AddSecurityDefinition(name: "Bearer", new OpenApiSecurityScheme
+    o.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter Your JWT key"
+        Description = "Enter the key"
     });
-    options.AddSecurityRequirement(securityRequirement: new OpenApiSecurityRequirement
+    o.AddSecurityRequirement(new OpenApiSecurityRequirement()
     {
         {
-            new OpenApiSecurityScheme
+            new OpenApiSecurityScheme()
             {
-                Reference = new OpenApiReference
+                Reference = new OpenApiReference()
                 {
                     Type = ReferenceType.SecurityScheme,
-                    Id =  "Bearer"
+                    Id = "Bearer"
                 },
                 Name = "Bearer",
-                In = ParameterLocation.Header
+                In = ParameterLocation.Header,
             },
             new List<string>()
         }
