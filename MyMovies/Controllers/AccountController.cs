@@ -1,14 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using MyMovies.Data;
-using MyMovies.Models;
 using MyMovies.Services;
 using MyMovies.Utility;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace MyMovies.Controllers
 {
@@ -17,13 +10,15 @@ namespace MyMovies.Controllers
     public class AccountController(JwtOptions jwtOptions, IAuthService authService) : ControllerBase
     {
         [HttpPost("register")]
-        public async Task<IActionResult> AuthenticateUser(RegisterDto userDto)
+        public async Task<IActionResult> RegisterUser(RegisterDto userDto)
         {
          if(!ModelState.IsValid) 
                 return BadRequest(ModelState);
          var result = await authService.RegisterAsync(userDto);
             if(!result.IsAuthenticated)
                 return BadRequest(result.Message);
+
+            SetRefreshTokenIntoCookie(result.RefreshToken, result.RefreshTokenExpiration);
 
             return Ok(result);
         }
@@ -38,12 +33,14 @@ namespace MyMovies.Controllers
             if(!result.IsAuthenticated)
                 return BadRequest(result.Message);
 
+            if (!string.IsNullOrEmpty(result.RefreshToken))
+                SetRefreshTokenIntoCookie(result.RefreshToken, result.RefreshTokenExpiration); 
             return Ok(result);
 
         }
 
         [HttpPost("addRole")]
-      //  [Authorize(Roles = SD.Role_Admin)]
+        [Authorize(Roles = SD.Role_Admin)]
 
         public async Task<IActionResult> AddRoleAsync(AddRoleDto dto)
         {
@@ -55,6 +52,20 @@ namespace MyMovies.Controllers
             if (!string.IsNullOrEmpty(result))
                 return BadRequest(result);
             return Ok(dto);
+        }
+        public async Task<IActionResult> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            var result = await authService. 
+        }
+        private void SetRefreshTokenIntoCookie(string refreshToken, DateTime expiresOn)
+        {
+            var cookieOption = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = expiresOn.ToLocalTime(),
+            };
+            Response.Cookies.Append("refreshToken", refreshToken, cookieOption);
         }
     }
 }

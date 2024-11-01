@@ -8,5 +8,6 @@ namespace MyMovies.Models
         public string  FirstName { get; set; }
         [Required, MaxLength(50)]
         public string lastName { get; set; }
+        public List<RefreshToken> RefreshTokens { get; set; }
     }
 }
