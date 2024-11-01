@@ -53,10 +53,31 @@ namespace MyMovies.Controllers
                 return BadRequest(result);
             return Ok(dto);
         }
+        [HttpGet("refreshToken")]
         public async Task<IActionResult> RefreshToken()
         {
             var refreshToken = Request.Cookies["refreshToken"];
-            var result = await authService. 
+            var result = await authService.RefreshTokenAsync(refreshToken);
+            if(!result.IsAuthenticated)
+                return BadRequest(result.Message);
+            SetRefreshTokenIntoCookie(result.RefreshToken, result.RefreshTokenExpiration);
+
+            return Ok(result);
+        }
+
+        [HttpPost("revokeToken")]
+        public async Task<IActionResult> RevokeToken(RevokeTokenDto dto)
+        {
+            var token = dto.Token ?? Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Token is required");
+
+            var result = await authService.RevokeTokenAsync(token);
+
+            if (!result)
+                return BadRequest("Token is invalid");
+            return Ok();
+
         }
         private void SetRefreshTokenIntoCookie(string refreshToken, DateTime expiresOn)
         {

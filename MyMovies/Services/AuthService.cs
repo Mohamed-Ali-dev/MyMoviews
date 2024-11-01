@@ -142,11 +142,11 @@ namespace MyMovies.Services
                  issuer: _jwtOptions.Issuer,
                 audience: _jwtOptions.Audience,
                 claims: claims,
-                expires: DateTime.Now.AddDays(_jwtOptions.lifetime),
+                expires: DateTime.Now.AddMinutes(_jwtOptions.lifetime),
                 signingCredentials: signingCredentials);
             return jwt;
         }
-        public async Task<AuthModel> RefreshToken(string token)
+        public async Task<AuthModel> RefreshTokenAsync(string token)
         {
             var authModel = new AuthModel();
 
@@ -181,6 +181,23 @@ namespace MyMovies.Services
             authModel.RefreshTokenExpiration = newRefreshToken.ExpiresOn;
 
             return authModel;
+        }
+        public async Task<bool> RevokeTokenAsync(string token)
+        {
+            var user = await _userManager.Users.SingleOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == token ));
+
+            if (user == null)
+                return false;
+
+            var refreshToken = user.RefreshTokens.Single(t =>t.Token == token);
+            if (!refreshToken.IsActive)
+                return false;
+
+            refreshToken.RevokedOn = DateTime.UtcNow;
+
+            await _userManager.UpdateAsync(user);
+
+            return true;
         }
         private RefreshToken GenerateRefreshToken()
         {
